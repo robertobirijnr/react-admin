@@ -1,14 +1,33 @@
+import { useEffect, useState } from "react";
 import Navbar from "./navBar";
 import SidebarMenu from "./sideBar";
+import axios from "axios";
+import { Navigate } from "react-router-dom";
 
-import React, { ReactNode } from "react";
+const Layout = (props: any) => {
+  const [redirect, setRedirect] = useState(false);
 
-interface Props {
-  children?: ReactNode;
-  // any props that come into the component
-}
+  useEffect(() => {
+    const getUser = async () => {
+      try {
+        const { data } = await axios.get("user");
+      } catch (e: any) {
+        if (e.response.status === 401) {
+          console.log("err", e);
+          setRedirect(true);
+        }
+      }
 
-const Layout = ({ children }: Props) => {
+      // setUser(data);
+    };
+
+    getUser();
+  }, []);
+
+  if (redirect) {
+    window.location.href = "/login";
+    // return <Navigate to="" />;
+  }
   return (
     <>
       <Navbar />
@@ -18,7 +37,7 @@ const Layout = ({ children }: Props) => {
           <SidebarMenu />
 
           <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            {children}
+            {props.children}
           </main>
         </div>
       </div>

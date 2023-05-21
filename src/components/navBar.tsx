@@ -9,7 +9,7 @@ const Navbar = () => {
     e.preventDefault();
 
     const { data }: any = await axios.post("logout", {});
-    if (data?.message == "success") {
+    if (data?.message === "success") {
       setLogout(true);
     }
   };

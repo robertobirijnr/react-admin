@@ -3,6 +3,8 @@ import Users from "./pages/Users";
 import Dashboard from "./pages/Dashboard";
 import Register from "./pages/Regiser";
 import LoginForm from "./pages/Login";
+import CreateUserForm from "./pages/users/UserCreate";
+import UserEditForm from "./pages/users/UserEdit";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
           <Route path={"/users"} Component={Users} />
           <Route path={"/register"} Component={Register} />
           <Route path={"/login"} Component={LoginForm} />
+          <Route path={"/create-user"} Component={CreateUserForm} />
+          <Route path={"/users/:id/edit"} Component={UserEditForm} />
         </Routes>
       </BrowserRouter>
     </div>
