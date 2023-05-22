@@ -20,6 +20,12 @@ const SidebarMenu = () => {
               Users
             </Link>
           </li>
+          <li className="nav-item">
+            <Link to={"/roles"} className="nav-link active" aria-current="page">
+              <span data-feather="home"></span>
+              Roles
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

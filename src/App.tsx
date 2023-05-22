@@ -5,6 +5,7 @@ import Register from "./pages/Regiser";
 import LoginForm from "./pages/Login";
 import CreateUserForm from "./pages/users/UserCreate";
 import UserEditForm from "./pages/users/UserEdit";
+import Roles from "./pages/roles";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path={"/login"} Component={LoginForm} />
           <Route path={"/create-user"} Component={CreateUserForm} />
           <Route path={"/users/:id/edit"} Component={UserEditForm} />
+          <Route path={"/roles"} Component={Roles} />
         </Routes>
       </BrowserRouter>
     </div>
