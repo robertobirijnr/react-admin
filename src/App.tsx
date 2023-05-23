@@ -8,6 +8,8 @@ import UserEditForm from "./pages/users/UserEdit";
 import Roles from "./pages/roles";
 import CreateRoleForm from "./pages/roles/createRole";
 import RoleEditForm from "./pages/roles/RoleEdit";
+import Product from "./pages/product";
+import CreateProduct from "./pages/product/createProduct";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path={"/roles"} Component={Roles} />
           <Route path={"/create-role"} Component={CreateRoleForm} />
           <Route path={"/roles/:id/edit"} Component={RoleEditForm} />
+          <Route path={"/products"} Component={Product} />
+          <Route path={"/create-product"} Component={CreateProduct} />
         </Routes>
       </BrowserRouter>
     </div>
