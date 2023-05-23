@@ -32,7 +32,7 @@ const Roles = () => {
   return (
     <Layout>
       <div className="pt-3 pb-2 mb-3 border-bottom">
-        <Link to="/create-user" className="btn btn-sm btn-outline-secondary">
+        <Link to="/create-role" className="btn btn-sm btn-outline-secondary">
           Add
         </Link>
       </div>
@@ -85,7 +85,7 @@ const Roles = () => {
         </table>
       </div>
 
-      <nav>
+      {/* <nav>
         <ul className="pagination">
           <li className="page-item">
             <a href="#" onClick={prev} className="page-link">
@@ -98,7 +98,7 @@ const Roles = () => {
             </a>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </Layout>
   );
 };
